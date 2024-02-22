@@ -1,0 +1,9 @@
+{
+  "extends": ["../.eslintrc"],
+  "parserOptions": {
+    "project": "./scripts/tsconfig.json"
+  },
+  "rules": {
+    "no-console": "off"
+  }
+}
