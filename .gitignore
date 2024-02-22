@@ -1,0 +1,11 @@
+# Installed dependencies
+node_modules/
+
+# Build assets
+dist/
+
+# Logs
+*.log
+
+# Vim
+*.swp

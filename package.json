@@ -1,0 +1,36 @@
+{
+  "name": "playground",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/main.js",
+  "type": "module",
+  "scripts": {
+    "dev": "NODE_ENV=development tsx watch src/main.ts --enable-source-maps --project tsconfig.build.json",
+    "build": "tsc --project tsconfig.build.json",
+    "start": "NODE_ENV=production node --enable-source-maps .",
+    "test": "vitest",
+    "lint": "run-p --aggregate-output lint:eslint lint:prettier",
+    "lint:prettier": "prettier --check '{src,test}/**/*.{ts,json,md}'",
+    "lint:eslint": "eslint --color '{src,test}/**/*.ts'",
+    "lint:fix": "prettier --write '{src,test}/**/*.{ts,json,md}' && eslint --fix '{src,test}/**/*.ts'"
+  },
+  "private": true,
+  "author": "",
+  "dependencies": {
+    "tslib": "^2.8.1"
+  },
+  "devDependencies": {
+    "@types/eslint": "^9.6.1",
+    "@types/node": "^22.10.2",
+    "@vitest/eslint-plugin": "^1.1.20",
+    "eslint": "^9.17.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.31.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^3.4.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.18.1",
+    "vitest": "^2.1.8"
+  }
+}
